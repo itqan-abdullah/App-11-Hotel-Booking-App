@@ -50,7 +50,7 @@ class CreditCard:
         
 class SecureCreditCard(CreditCard):
         def authenticate(self,given_password):
-            password = df_cards_security.`loc`[df_cards_security['number' == self.number],'password'].squeeze()
+            password = df_cards_security.loc[df_cards_security['number' == self.number],'password'].squeeze()
             if password == given_password:
                 return True
             else:
